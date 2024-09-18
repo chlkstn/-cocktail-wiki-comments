@@ -1,3 +1,8 @@
+
+// This context is used for data between "Search and ListResult "
+
+
+
 import { createContext, useContext, useState } from "react";
 
 // Define the types

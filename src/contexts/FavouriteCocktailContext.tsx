@@ -23,7 +23,6 @@ const FavouriteCocktailContext = createContext<
   FavouriteCocktailContextProps | undefined
 >(undefined);
 
-
 // hook use context
 export const useFavouriteCocktails = () => {
   const context = useContext(FavouriteCocktailContext);

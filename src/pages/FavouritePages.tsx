@@ -4,9 +4,8 @@ import { CocktailCard } from "../components/CocktailCard";
 export function FavouritePage() {
   const { favouriteCocktails, removeFavourite } = useFavouriteCocktails(); // Access favorite cocktails from the favouritecocktailcontext
 
-
   // Createing the list item from the favoritecocktailContext
-  //renders out a every favorite. Key = cocktail is
+  //renders out a every favorite.key
   return (
     <div className="favouritepage-container">
       <h1>Your Favourite Cocktails</h1>

@@ -8,7 +8,7 @@ export const CocktailDetailsPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // we are putting the fetch Api call inside a Use Effect for Reacts render
+  // we are putting the fetch Api call inside a Use Effect for Reacts renderer
 
   useEffect(() => {
     const fetchCocktail = async () => {
@@ -62,15 +62,15 @@ export const CocktailDetailsPage = () => {
       <h3>Instructions</h3>
       <p>{cocktail.strInstructions}</p>
 
-      {
-        /* Ingredients and Measures */
-        //We are looping over each of the pontentially 15 ingredients (API can have up to 15 ingredients/mmeasures)
-        // We are giving each array item a key to make it unique for React to identify it and set the position in the array
-      }
+      {/* Ingredients and Measures */}
       <h3>Ingredients</h3>
       <ul>
+        {/*  Loops over the cocktail data and render out ingredients and measurements in the DOM */}
         {Array.from({ length: 15 }).map((_, index) => {
           const ingredient = cocktail[`strIngredient${index + 1}`];
+          {
+            /* increment by +1 */
+          }
           const measure = cocktail[`strMeasure${index + 1}`];
           return ingredient ? (
             <li key={index}>
